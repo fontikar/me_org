@@ -1,0 +1,26 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Welcome to modelevaluation.org!
+
+**modelevaluation.org** is a web application for evaluating and benchmarking computational models. 
+
+The main goal for `modelevaluation.org` is to **centralise, standardise and streamline** the workflow associated with model inter-comparisons. While this tool is often used in climate sciences with [land surface models](https://journals.ametsoc.org/view/journals/hydr/16/3/jhm-d-14-0158_1.xml), it is not restricted to this particular context. We welcome users from all fields to use `modelevaluation.org` for their own research questions and applications where comparing models is of interest.
+
+### Getting started
+
+We recommend checking out this [tutorial]() on how to get started with `modelevaluation.org`. We have also compiled some FAQs and other resources for further reading. 
+
+### Want to contribute? 
+
+`modelevaluation.org` is a community project – [get in touch]() and help us make it better!

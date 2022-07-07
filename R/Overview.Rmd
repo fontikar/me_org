@@ -1,26 +1,30 @@
 ---
 title: "An overview"
-output: html_document
+knit: (function(input_file, encoding) {
+    out_dir <- '../docs';
+    rmarkdown::render(input_file,
+      encoding=encoding,
+      output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-We have provided a general overview of `modelevaluation.org` and described the function of each major component. We also recommend taking a look at our [step-by-step case study]()
+We have provided a general overview of `modelevaluation.org` and described the function of each major component. We also recommend taking a look at our [step-by-step case study]() _[No link yet, an example study that is open access would be good!]_
 
 ## Access
 
 To begin using `modelevaluation.org`, users must first register for an account. 
-Click on `Register` on the top right hand corner and fill in the relevant information. Note that users must agree to the [Terms of Use](https://modelevaluation.org/terms-of-use) to create an account. Once registration is complete, click on  `Login` and enter your credentials to access `modelevaluation.org`. If you would like to have admin user rights, please contact us [here](). 
+Click on `Register` on the top right hand corner and fill in the relevant information. Note that users must agree to the [Terms of Use](https://modelevaluation.org/terms-of-use) to create an account. Once registration is complete, click on  `Login` and enter your credentials to access `modelevaluation.org`. If you would like to have admin user rights, please contact us [here]() _[No link yet, not sure if this is the how people get admin rights!]_
 
 ## The Workflow
 
-`modelevaluation.org` facilitates model comparisons by hosting model comparison experiments and their respective data sets, by providing a centralized space for models to be evaluated objectively. A registered user can download the data for a particular experiment, run their model simulation locally and upload their model output to `modelevaluation.org` see how their model performed relative to other models and with the original data?[not sure what is the best wording here] in the same experiment. 
+`modelevaluation.org` facilitates model comparisons by hosting model comparison experiments and their respective data sets, by providing a centralized space for models to be evaluated objectively. A registered user can download the data for a particular experiment, run their model simulation locally and upload their model output to `modelevaluation.org` see how their model performed relative to other models and with the original data for? _[not sure what is the best wording here for single evaluation]_ in the same experiment. 
 
 ## Workspace
 
-Any user can create a workspace in the web application. A workspace is an environment for model development and is used to group users together that are collaborating on the same project. A workshop stores the necessary [experiment](#experiment) and [datasets](#data) for a particular model comparison project. A workspace can be used privately or can be made public for larger scale model inter-comparisons. [Want to link to a relevant paper]
+Any user can create a workspace in the web application. A workspace is an environment for model development and is used to group users together that are collaborating on the same project. A workshop stores the necessary [experiment](#experiment) and [datasets](#data) for a particular model comparison project. A workspace can be used privately or can be made public for larger scale model inter-comparisons. _[Want to link to a relevant paper]_
 
 ## Experiment {#experiment}
 
@@ -38,4 +42,6 @@ Model outputs are used to as inputs for the [analysis script](#analysisscript) i
 
 The analysis script of a given experiment is created by an admin users and determines what type of visualizations are created for benchmarking across models. The analysis script is not limited to any programming language or package dependencies and accepts user supplied [model outputs](#modeloutput) as inputs. Once the analysis is complete, it will return the various images, metrics and evaluation products used, along with any error messages and addition information pertaining to the each image (e.g. filepaths and types).
 
-## Evaluation product ?
+## Evaluation product 
+
+_[Need to ask Gab what this is exactly...]_

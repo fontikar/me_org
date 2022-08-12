@@ -379,20 +379,21 @@ agree to the <a href="https://modelevaluation.org/terms-of-use">Terms of
 Use</a> to create an account. Once registration is complete, click on
 <code>Login</code> and enter your credentials to access
 <code>modelevaluation.org</code>. If you would like to have admin user
-rights, please contact us <a href>here</a> <em>[No link yet, not sure
-if this is the how people get admin rights!]</em></p>
+rights, please contact us <a href="mailto:admin@modelevaluation.org">here</a></p>
 </div>
 <div id="the-workflow" class="section level2">
 <h2>The Workflow</h2>
-<p><code>modelevaluation.org</code> facilitates model comparisons by
-hosting model comparison experiments and their respective data sets, by
-providing a centralized space for models to be evaluated objectively. A
-registered user can download the data for a particular experiment, run
-their model simulation locally and upload their model output to
-<code>modelevaluation.org</code> see how their model performed relative
-to other models and with the original data for? <em>[not sure what is
-the best wording here for single evaluation]</em> in the same
-experiment.</p>
+<p><code>modelevaluation.org</code> facilitates automated model
+evaluation as part of model development, as well as model comparisons,
+by hosting model evaluation experiments along with their associated data
+sets and analysis scripts in a centralized space. A registered user can
+download the data for a particular experiment, run their model
+simulation locally and upload their model output to modelevaluation.org
+see how their model performed relative to observational or reference
+data, as well other models that have contributed to the same experiment.
+As an example, the <a href="https://journals.ametsoc.org/view/journals/hydr/16/3/jhm-d-14-0158_1.xml">PLUMBER
+land surface model inter-comparison experiment</a> was conducted though
+<code>modelevaluation.org</code></p>
 </div>
 <div id="workspace" class="section level2">
 <h2>Workspace</h2>
@@ -406,50 +407,49 @@ model inter-comparisons. <em>[Want to link to a relevant paper]</em></p>
 <div id="experiment" class="section level2">
 <h2>Experiment</h2>
 <p>An experiment sets the key parameters (e.g data, types of analyses,
-spatial scale) for a model comparison project. It contains a <a href="#analysisscript">master analysis script</a> which determines what
-<a href="#modeloutput">model outputs</a> are used in model benchmarking
-visualizations. Only admin users can create experiment files from
-scratch. Registered users can clone existing experiments and edit
-certain fields for their own use. Please note that analysis scripts from
-cloned experiments cannot be edited at this stage.</p>
+sspatial and temporal scale) for a model evaluation project. It contains
+a <a href="#analysisscript">master analysis script</a> which determines
+how <a href="#modeloutput">model outputs</a> are analysed and which
+evaluation visualizations are produced. Only admin users can create new
+experiment templates, but any registered users can clone existing
+experiments from <code>modelevaluation.org</code> and edit their
+analysis scripts for their own use.</p>
 </div>
 <div id="data" class="section level2">
 <h2>Data</h2>
 <p>Various data sets are used in a model comparison experiment. Only
 admin users can create data sets. All data sets are version controlled.
 Clicking on a data set name will take the user to the associated
-meta-data for a particular data set. Currently, there are many fluxnet
-tower data files for public use. Once a user downloads the data
+meta-dataand files for a particular data set. Currently, there are many
+flux tower data files for public use. Once a user downloads the data
 associated with an experiment and run their own simulation model
 locally, <a href="#modeloutput">model outputs</a> will be produced.</p>
 </div>
 <div id="modeloutput" class="section level2">
-<h2>Model outputs and model profile</h2>
-<p>Model outputs are used to as inputs for the <a href="#analysisscript">analysis script</a> in order to evaluate the
-performance of a model in a given experiment. A model profile which
-contains meta-data of the model outputs must be created first on
-<code>modelevaluation.org</code> before model outputs are uploaded on
-the site. During the upload process, a user can then select what
-benchmarks (e.g. other models uploaded by other users to the experiment)
-to compare with their own submission. Once the model outputs are
-submitted, the execution of the <a href="#analysisscript">analysis
-script</a> associated with the experiment is automatically
-triggered.</p>
+<h2>Model outputs and model profiles</h2>
+<p>Model outputs are uploaded by users to a particular experiment. They
+are used to as inputs for the <a href="#analysisscript">analysis
+script</a> to evaluate the performance of models in a given experiment.
+A model profile contains meta-data about the model that created a
+particular output, and must be created first on
+<code>modelevaluation.org</code> before outputs are uploaded. During the
+upload process, a user can select nominating benchmarks (e.g. other
+outputs uploaded to the experiment by other users) to compare with their
+own submission. Once the model outputs are submitted, the execution of
+the <a href="#analysisscript">analysis script</a> associated with the
+experiment is triggered.</p>
 </div>
 <div id="analysisscript" class="section level2">
 <h2>Analysis Script</h2>
 <p>The analysis script of a given experiment is created by an admin
-users and determines what type of visualizations are created for
-benchmarking across models. The analysis script is not limited to any
-programming language or package dependencies and accepts user supplied
-<a href="#modeloutput">model outputs</a> as inputs. Once the analysis is
-complete, it will return the various images, metrics and evaluation
-products used, along with any error messages and addition information
-pertaining to the each image (e.g. filepaths and types).</p>
-</div>
-<div id="evaluation-product" class="section level2">
-<h2>Evaluation product</h2>
-<p><em>[Need to ask Gab what this is exactly…]</em></p>
+users and determines what type of visualizations are created for for
+evaluating model outputs submitted to that experiment. The analysis
+script is not limited to any programming language or package
+dependencies and accepts user supplied <a href="#modeloutput">model
+outputs</a> as inputs. Once the analysis is complete, it will typically
+return plots and diagnostics as images, along with any error messages
+and additional information pertaining to the each image (e.g. filepaths
+and types).</p>
 </div>
 
 

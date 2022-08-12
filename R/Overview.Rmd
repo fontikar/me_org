@@ -16,11 +16,11 @@ We have provided a general overview of `modelevaluation.org` and described the f
 ## Access
 
 To begin using `modelevaluation.org`, users must first register for an account. 
-Click on `Register` on the top right hand corner and fill in the relevant information. Note that users must agree to the [Terms of Use](https://modelevaluation.org/terms-of-use) to create an account. Once registration is complete, click on  `Login` and enter your credentials to access `modelevaluation.org`. If you would like to have admin user rights, please contact us [here]() _[No link yet, not sure if this is the how people get admin rights!]_
+Click on `Register` on the top right hand corner and fill in the relevant information. Note that users must agree to the [Terms of Use](https://modelevaluation.org/terms-of-use) to create an account. Once registration is complete, click on  `Login` and enter your credentials to access `modelevaluation.org`. If you would like to have admin user rights, please contact us [here](mailto:admin@modelevaluation.org) 
 
 ## The Workflow
 
-`modelevaluation.org` facilitates model comparisons by hosting model comparison experiments and their respective data sets, by providing a centralized space for models to be evaluated objectively. A registered user can download the data for a particular experiment, run their model simulation locally and upload their model output to `modelevaluation.org` see how their model performed relative to other models and with the original data for? _[not sure what is the best wording here for single evaluation]_ in the same experiment. 
+`modelevaluation.org` facilitates automated model evaluation as part of model development, as well as model comparisons, by hosting model evaluation experiments along with their associated data sets and analysis scripts in a centralized space. A registered user can download the data for a particular experiment, run their model simulation locally and upload their model output to modelevaluation.org see how their model performed relative to observational or reference data, as well other models that have contributed to the same experiment. As an example, the [PLUMBER land surface model inter-comparison experiment](https://journals.ametsoc.org/view/journals/hydr/16/3/jhm-d-14-0158_1.xml) was conducted though `modelevaluation.org`  
 
 ## Workspace
 
@@ -28,20 +28,17 @@ Any user can create a workspace in the web application. A workspace is an enviro
 
 ## Experiment {#experiment}
 
-An experiment sets the key parameters (e.g data, types of analyses, spatial scale) for a model comparison project. It contains a [master analysis script](#analysisscript) which determines what [model outputs](#modeloutput) are used in model benchmarking visualizations. Only admin users can create experiment files from scratch. Registered users can clone existing experiments and edit certain fields for their own use. Please note that analysis scripts from cloned experiments cannot be edited at this stage. 
+An experiment sets the key parameters (e.g data, types of analyses, sspatial and temporal scale) for a model evaluation project. It contains a [master analysis script](#analysisscript) which determines how [model outputs](#modeloutput) are analysed and which evaluation visualizations are produced. Only admin users can create new experiment templates, but any registered users can clone existing experiments from `modelevaluation.org` and edit their analysis scripts for their own use.
 
 ## Data  {#data}
 
-Various data sets are used in a model comparison experiment. Only admin users can create data sets. All data sets are version controlled. Clicking on a data set name will take the user to the associated meta-data for a particular data set. Currently, there are many fluxnet tower data files for public use. Once a user downloads the data associated with an experiment and run their own simulation model locally, [model outputs](#modeloutput) will be produced.
+Various data sets are used in a model comparison experiment. Only admin users can create data sets. All data sets are version controlled. Clicking on a data set name will take the user to the associated meta-dataand files for a particular data set. Currently, there are many flux tower data files for public use. Once a user downloads the data associated with an experiment and run their own simulation model locally, [model outputs](#modeloutput) will be produced.
 
-## Model outputs and model profile {#modeloutput}
+## Model outputs and model profiles {#modeloutput}
 
-Model outputs are used to as inputs for the [analysis script](#analysisscript) in order to evaluate the performance of a model in a given experiment. A model profile which contains meta-data of the model outputs must be created first on `modelevaluation.org` before model outputs are uploaded on the site. During the upload process, a user can then select what benchmarks (e.g. other models uploaded by other users to the experiment) to compare with their own submission. Once the model outputs are submitted, the execution of the [analysis script](#analysisscript) associated with the experiment is automatically triggered.
+Model outputs are uploaded by users to a particular experiment. They are used to as inputs for the [analysis script](#analysisscript) to evaluate the performance of models in a given experiment. A model profile contains meta-data about the model that created a particular output, and must be created first on `modelevaluation.org` before  outputs are uploaded. During the upload process, a user can select  nominating benchmarks (e.g. other outputs uploaded to the experiment by other users) to compare with their own submission. Once the model outputs are submitted, the execution of the [analysis script](#analysisscript) associated with the experiment is triggered.
 
 ## Analysis Script {#analysisscript}
 
-The analysis script of a given experiment is created by an admin users and determines what type of visualizations are created for benchmarking across models. The analysis script is not limited to any programming language or package dependencies and accepts user supplied [model outputs](#modeloutput) as inputs. Once the analysis is complete, it will return the various images, metrics and evaluation products used, along with any error messages and addition information pertaining to the each image (e.g. filepaths and types).
+The analysis script of a given experiment is created by an admin users and determines what type of visualizations are created for for evaluating  model outputs submitted to that experiment. The analysis script is not limited to any programming language or package dependencies and accepts user supplied [model outputs](#modeloutput) as inputs. Once the analysis is complete, it will typically return plots and diagnostics as images, along with any error messages and additional information pertaining to the each image (e.g. filepaths and types).
 
-## Evaluation product 
-
-_[Need to ask Gab what this is exactly...]_
